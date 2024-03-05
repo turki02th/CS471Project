@@ -6,6 +6,21 @@
  <title>
  EBook - {% block title %}{% endblock %}
  </title>
+ 
+ <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+   </style>
+ 
+  {% block stylesheets %}
+  
+  {% endblock stylesheets %}
+
+
+ 
+
  </head>
  <body>
  {% include 'includes/header.html' %}
