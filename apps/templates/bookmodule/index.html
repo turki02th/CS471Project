@@ -1,4 +1,6 @@
 {% extends "layouts/base.html" %}
+{% load static %}
+
 
 {% block stylesheets %}
 
@@ -13,7 +15,9 @@
 
 {% block content %}
 
-<a href="ElibraryWebsite\media\images\Elibrary-h.png">show Pic</a>
+<img src="{% static '/image/Elibrary-h.png' %}" >
+
+<a href= {% static '/image/Elibrary-h.png' %} >show Pic</a>
 
 
 <h1> Hello evreyone to Elibrary Website !</h1>
