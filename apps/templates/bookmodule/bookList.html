@@ -3,26 +3,65 @@
 
 {% block content %}
 
-<h1>Book List</h1>
-<h3>Book 1</h3>
-<h4>Title</h4>
-<a href="/book/12344321">Continuous Delivery</a>
-<h4>Authors</h4>
-<p>by J. Humble and D. Farley</p>
-<h4>Description</h4>
-<p>This book shows how to deliver your software more reliable using using automated processes.</p>
-<a href= "{% static '/image/JD-book.jpg' %}" >show book Pic</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
 
-</br>
-</br>
+<table border="1">
+    <tr>
+        <th colspan="2"><h1>Book List</h1></th>
+    </tr>
+    <tr>
+        <td>
+            <h3>Book 1</h3>
+            <table>
+                <tr>
+                    <td><h4>Title</h4></td>
+                    <td><a href="/book/12344321">Continuous Delivery</a></td>
+                </tr>
+                <tr>
+                    <td><h4>Authors</h4></td>
+                    <td><p>by J. Humble and D. Farley</p></td>
+                </tr>
+                <tr>
+                    <td><h4>Description</h4></td>
+                    <td><p>This book shows how to deliver your software more reliably using automated processes.</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="{% static '/image/JD-book.jpg' %}">Show Book Pic</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3>Book 2</h3>
+            <table>
+                <tr>
+                    <td><h4>Title</h4></td>
+                    <td><a href="/book/56788765">Reversing: Secrets of Reverse Engineering</a></td>
+                </tr>
+                <tr>
+                    <td><h4>Author</h4></td>
+                    <td><p>by E. Eilam</p></td>
+                </tr>
+                <tr>
+                    <td><h4>Description</h4></td>
+                    <td><p>This book provides in-depth practical techniques and methods for reverse engineering.</p></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="{% static '/image/Reversing-Reverse-Engineering-book.png' %}">Show Book Pic</a></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
-<h3>Book 2</h3>
-<h4>Title</h4>
-<a href="/book/56788765">Reversing: Secrets of Reverse Engineering</a>
-<h4>Author</h4>
-<p>by E. Eilam</p>
-<h4>Description</h4>
-<p>This book provides in-depth prcatical techinuqes and methods for reverse eingieering</p>
-<a href= "{% static '/image/Reversing-Reverse-Engineering-book.png' %}" >show book Pic</a>
+</body>
+
+
 
 {% endblock content %}

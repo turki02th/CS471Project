@@ -8,6 +8,9 @@ def index(request):
 def books(request):
     return render(request, 'bookmodule/bookList.html')
 
+def filterBooks(request):
+    return render(request, 'bookmodule/search.html')
+
 def book(request, bId):
     
     book1 = {'id':12344321, 'title':'Continuous Delivery', 'author':'J. Humble and D. Farley'}
