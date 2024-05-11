@@ -11,15 +11,14 @@
     }
    </style>  
 
+
 {% endblock stylesheets %}
 
 {% block content %}
 
-
 <h1> Hello evreyone to Elibrary Website ! </h1>
 
-
-<hr size="8" width="90%" color="green"> 
+    <hr size="8" width="60%" color="green"> 
 
 </br>
 
@@ -29,6 +28,7 @@
 </br>
 
 <form method="post">
+
     {% csrf_token %}
     <label>Keywords:</label>
     <input type="text" name="keyword" placeholder="enter a keyword"/>
@@ -52,6 +52,7 @@
 
     <br/>
     <button type="submit" >Search</button>
+
 </form>
 
 {% endblock content %}

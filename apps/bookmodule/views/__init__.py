@@ -9,7 +9,9 @@ def books(request):
     return render(request, 'bookmodule/bookList.html')
 
 def filterBooks(request):
-    return render(request, 'bookmodule/search.html')
+    
+    
+    return render(request, 'bookmodule/index.html')
 
 def book(request, bId):
     
