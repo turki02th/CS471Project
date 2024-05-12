@@ -5,6 +5,10 @@ def index(request):
     # this view return index
 	return render(request, 'bookmodule/index.html')
 
+def contactPage(request):
+    # this view return index
+	return render(request, 'bookmodule/contactPage.html')
+
 def books(request):
     return render(request, 'bookmodule/bookList.html', {'books:__getBokks()'})
 
