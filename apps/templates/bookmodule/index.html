@@ -16,43 +16,81 @@
 
 {% block content %}
 
-<h1> Hello evreyone to Elibrary Website ! </h1>
 
-    <hr size="8" width="60%" color="green"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to eLibrary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        header, footer {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header img, footer img {
+            max-width: 100px;
+            height: auto;
+        }
+        .welcome-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .welcome-container h1 {
+            color: #333;
+        }
+        .welcome-container p {
+            color: #666;
+        }
+        .welcome-container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .welcome-container a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="welcome-container">
+        <h1>Welcome to eLibrary</h1>
+        <p>Your digital library for endless learning and reading</p>
+        <a href="bookmodule/book.html">Avaialble books</a>
+    </div>
+    <a href="/contactPage">contactPage</a>
+
+</body>
+</html>
+
+
+
+
 
 </br>
-
-<a href="/books">Avaialble books</a>
-
-</br>
 </br>
 
-<form method="post">
 
-    {% csrf_token %}
-    <label>Keywords:</label>
-    <input type="text" name="keyword" placeholder="enter a keyword"/>
-    <br/> 
-
-    <label>Search in:</label>
-    <input type="checkbox" name="option1"/><label>Title</label>
-    <input type="checkbox" name="option2"/><label>Author</label>
-    <br/>
-
-    <select name="selectedgenre" size="4">
-        <option selected>None</option>
-        <option value="fiction">Fiction</option>
-        <option value="n-fiction">Non-fiction</option>
-        <option value="novel">Novel</option>
-    </select>
-
-    <br/>
-
-    <textarea name="description" rows="10" cols="30"></textarea>
-
-    <br/>
-    <button type="submit" >Search</button>
-
-</form>
 
 {% endblock content %}

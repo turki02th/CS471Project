@@ -9,7 +9,7 @@ from apps.bookmodule import views
 
 urlpatterns = [    
     path('', views.index, name='index'),
-    path('books', views.books),
+    path('books', views.books , name = "books"),
     path('book/<int:bId>', views.book),
     path('filterBooks', views.filterBooks, name="filterBooks"),
     path('contactPage', views.contactPage, name= "contactPage"),

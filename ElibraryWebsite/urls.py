@@ -25,14 +25,24 @@ from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.urls import path ;import include
+from apps.bookmodule import views
 
+from django.urls import path
+from django.urls import re_path
+from apps.bookmodule import views
+
+
+
+
+
+from django.contrib import admin
+from django.urls import path
+from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("apps.bookmodule.urls")),
-    
-
-
+    path('', include("apps.bookmodule.urls")),
 ]
 
 urlpatterns == static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 
+
 # Create your views here.
 def index(request):
     # this view return index
@@ -11,6 +12,10 @@ def contactPage(request):
 
 def books(request):
     return render(request, 'bookmodule/bookList.html', {'books:__getBokks()'})
+
+
+def books(request):
+    return render(request, 'bookmodule/bookList.html', {'books': books})
 
 def filterBooks(request):
     # this view return index
